@@ -4,7 +4,7 @@ class pet {
     this.health = 100;
     this.hunger = 100;
     this.thirst = 100;
-    this.tired = 0;
+    this.energy = 100;
   }
   eat() {
     this.hunger += 20;
@@ -18,7 +18,7 @@ class pet {
   cycle() {
     this.hunger -= 1;
     this.thirst -= 1;
-    this.tired += 1;
+    this.energy -= 1;
     this.cycle();
   }
 }
@@ -32,7 +32,7 @@ class dog extends pet {
     this.hunger -= 10;
     this.health += 10;
     this.thirst -= 10;
-    this.tired += 10;
+    this.energy -= 10;
   }
 }
 
@@ -45,7 +45,7 @@ class cat extends pet {
     this.hunger -= 10;
     this.health += 10;
     this.thirst -= 10;
-    this.tired += 10;
+    this.energy -= 10;
     this.happy += 25;
   }
 }
