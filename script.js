@@ -24,15 +24,25 @@ class pet {
 }
 
 class guineaPig extends pet {
-    constructor(name, content) {
+    constructor(name) {
     
-    super(name, content);
-    this.content = content;
+    super(name);
     }
+}
     
     runWheel() {
     this.health += 10;
     this.hunger -= 10;
-    console.log(`${this.name} is happy`);
+    this.energy -= 20;
+    this.thirst -= 20;
+    // console.log(`${this.name} is happy`);
     return this;
     }
+
+    poops() {
+        this.health += 10;
+        this.hunger -= 30;
+        this.thirst -= 10;
+        // console.log(`${this.name} is relieved.`);
+        return this;
+        }
