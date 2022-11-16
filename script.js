@@ -4,7 +4,7 @@ class pet {
         this.health = 100;
         this.hunger = 100;
         this.thirst = 100;
-        this.tired = 0;
+        this.energy = 100;
     }
     eat() {
         this.hunger += 20;
@@ -13,7 +13,7 @@ class pet {
         this.thirst += 20;
     }
     sleep() {
-        this.tired -= 20;
+        this.energy += 20;
     }
     cycle() {
         this.hunger -= 1;
