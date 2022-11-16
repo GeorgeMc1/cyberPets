@@ -13,7 +13,7 @@ class pet {
     this.thirst += 20;
   }
   sleep() {
-    this.tired -= 20;
+    this.energy -= 20;
   }
   cycle() {
     this.hunger -= 1;
@@ -37,8 +37,8 @@ class dog extends pet {
 }
 
 class cat extends pet {
-  constructor(name) {
-    super(name);
+  constructor(name, happy) {
+    super(name, happy);
     this.happy = 100;
   }
   play() {
