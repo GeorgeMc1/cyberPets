@@ -49,3 +49,25 @@ class cat extends pet {
     this.happy += 25;
   }
 }
+class guineaPig extends pet {
+    constructor(name) {    
+    super(name);
+    }
+ }
+    runWheel() {
+    this.health += 10;
+    this.hunger -= 10;
+    this.energy -= 20;
+    this.thirst -= 20;
+    // console.log(`${this.name} is happy`);
+    return this;
+    }
+
+    poops() {
+        this.health += 10;
+        this.hunger -= 30;
+        this.thirst -= 10;
+        // console.log(`${this.name} is relieved.`);
+        return this;
+        }
+}
