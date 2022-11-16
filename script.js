@@ -19,6 +19,8 @@ class pet {
         this.hunger -= 1;
         this.thirst -= 1;
         this.tired += 1;
-        this.cycle();
+        setTimeout(() => {
+            this.cycle();
+        }, 200);
     }
 }
