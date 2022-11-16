@@ -22,3 +22,17 @@ class pet {
         this.cycle();
     }
 }
+
+class guineaPig extends pet {
+    constructor(name, content) {
+    
+    super(name, content);
+    this.content = content;
+    }
+    
+    runWheel() {
+    this.health += 10;
+    this.hunger -= 10;
+    console.log(`${this.name} is happy`);
+    return this;
+    }
