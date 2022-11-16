@@ -26,7 +26,6 @@ class pet {
 class dog extends pet {
   constructor(name) {
     super(name);
-    this.name = name;
   }
 
   walk() {
@@ -40,6 +39,13 @@ class dog extends pet {
 class cat extends pet {
   constructor(name) {
     super(name);
-    this.name = name;
+    this.happy = 100;
+  }
+  play() {
+    this.hunger -= 10;
+    this.health += 10;
+    this.thirst -= 10;
+    this.tired += 10;
+    this.happy += 25;
   }
 }
