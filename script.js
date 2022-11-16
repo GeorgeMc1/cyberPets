@@ -29,9 +29,9 @@ class dog extends pet {
   }
 
   walk() {
-    this.hunger += 10;
+    this.hunger -= 10;
     this.health += 10;
-    this.thirst += 10;
+    this.thirst -= 10;
     this.tired += 10;
   }
 }
