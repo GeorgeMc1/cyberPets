@@ -1,79 +1,143 @@
 body {
-    background-color: rgb(197, 221, 221);
+  background-color: rgb(197, 221, 221);
+  margin: 0;
 }
 
 h1 {
-    color: blueviolet;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-    font-size: 40px;
+  color: blueviolet;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  font-size: 40px;
 }
 
-h2{
-    margin: 10px;
+h2 {
+  margin: 10px;
 }
 
 #petChoice {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-#petChoice img, #petImage {
-    width: 200px;
-    border: 10px ridge blueviolet;
-    margin: 30px;
+#petChoice img,
+#petImage {
+  width: 200px;
+  border: 10px ridge blueviolet;
 }
 
-#modalOne, #modalTwo{
-    display: none;
-    align-items: flex-start;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 15%;
-    z-index: 1;
+#modalOne,
+#modalTwo {
+  display: none;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 15%;
+  z-index: 1;
 }
 
-#modalOneContent, #modalTwoContent{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    padding: 20px;
-    width: 50%;
-    background-color: white;
+#modalOneContent,
+#modalTwoContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  width: 50%;
+  background-color: white;
 }
 
-#nameInput{
-    margin-bottom: 10px;
+#nameInput {
+  margin-bottom: 10px;
 }
 
-#gameBox{
-    display: none;
-    flex-direction: column;
-    align-items: center;
+#gameBox {
+  display: none;
+  flex-direction: column;
+  align-items: center;
 }
 
 #careChoices {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-#walk, #runWheel, #play, #poops{
-    display: none;
+#walk,
+#runWheel,
+#play,
+#poops {
+  display: none;
 }
 
 .image {
-    width: 120px;
-    height: 120px;
-    border: 3px ridge blueviolet;
-    margin: 10px;
+  width: 120px;
+  height: 120px;
+  border: 3px ridge blueviolet;
+  margin: 10px;
 }
 
 #prarametersLevel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+  #petChoice {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-content: center;
     align-items: center;
+  }
+
+  .image {
+    width: 50px;
+    height: 50px;
+    border: 3px ridge blueviolet;
+    margin: 10px;
+  }
+
+  .pet-coice {
+    margin-bottom: 6px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #careChoices {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 304px) {
+  .image {
+    width: 28px;
+    height: 28px;
+    border: 3px ridge blueviolet;
+    margin: 10px;
+  }
+
+  #petChoice img,
+  #petImage {
+    width: 174px;
+    border: 10px ridge blueviolet;
+  }
+
+  h1 {
+    font-size: 33px;
+  }
+
+  h2 {
+    margin: 9px;
+  }
+
+  #modalOneContent,
+  #modalTwoContent {
+    padding: 16px;
+  }
 }
