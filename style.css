@@ -21,6 +21,11 @@ h1 {
     margin: 30px;
 }
 
+#gameBox{
+    display: none;
+    flex-direction: column;
+}
+
 #careChoices {
     display: flex;
     flex-direction: row;
