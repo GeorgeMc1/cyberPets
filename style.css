@@ -20,6 +20,10 @@ h2 {
   justify-content: center;
 }
 
+.pet-choice{
+    margin: 0 10px;
+}
+
 #petChoice img,
 #petImage {
   width: 200px;
@@ -100,8 +104,8 @@ h2 {
     margin: 10px;
   }
 
-  .pet-coice {
-    margin-bottom: 6px;
+  .pet-choice {
+    margin: 0 0 6px 0;
   }
 }
 
