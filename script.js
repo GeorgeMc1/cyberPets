@@ -93,9 +93,35 @@ class guineaPig extends pet {
         return this;
     }
 }
+let currentPet;
 dogBtn.addEventListener("click", () => {
+    food.src = "./images/dog.eat.png";
     let name = prompt("What would you like to call your dog?", "bill");
-    let currentPet = new dog(name);
+    currentPet = new dog(name);
+    petName.innerHTML = currentPet.name;
+    petChoice.style.display = "none";
+    petImage.src = "./images/dog.png"
+    gameBox.style.display = "flex";
+    currentPet.cycle();
+})
+guineaPigBtn.addEventListener("click", () => {
+    food.src = "./images/guineapig.food.png";
+    let name = prompt("What would you like to call your guinea pig?", "bill");
+    currentPet = new guineaPig(name);
+    petName.innerHTML = currentPet.name;
+    petChoice.style.display = "none";
+    petImage.src = "./images/guneapig.png"
+    gameBox.style.display = "flex";
+    currentPet.cycle();
+})
+catBtn.addEventListener("click", () => {
+    food.src = "./images/cat.eat.png";
+    let name = prompt("What would you like to call your cat?", "bill");
+    currentPet = new cat(name);
+    petName.innerHTML = currentPet.name;
+    petChoice.style.display = "none";
+    petImage.src = "./images/cat.png"
+    gameBox.style.display = "flex";
     currentPet.cycle();
 })
 walk.addEventListener("click", () => {

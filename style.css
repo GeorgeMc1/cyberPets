@@ -1,5 +1,49 @@
-.button{
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
+body {
+    background-color: rgb(197, 221, 221);
+}
+
+h1 {
+    color: blueviolet;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size: 40px;
+}
+
+#petChoice {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#petChoice img {
+    width: 200px;
+    border: 10px ridge blueviolet;
+    margin: 30px;
+}
+
+#gameBox{
+    display: none;
+    flex-direction: column;
+}
+
+#careChoices {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#careChoices img {
+    width: 70px;
+    border: 3px ridge blueviolet;
+    margin: 10px;
+}
+
+#runWheel {
+    padding-bottom: 30px;
+}
+
+#prarametersLevel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
