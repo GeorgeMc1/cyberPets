@@ -24,6 +24,7 @@ h1 {
 #gameBox{
     display: none;
     flex-direction: column;
+    align-items: center;
 }
 
 #careChoices {
