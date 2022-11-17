@@ -26,12 +26,35 @@ class pet {
         return this;
     }
     cycle() {
-        this.health -= 1;
-        this.hunger -= 1;
-        this.thirst -= 1;
-        this.energy -= 1;
-        this.happy -= 1;
-        this.updateBars();
+        if (this.health > 0 && this.hunger > 0 && this.thirst > 0 && this.energy > 0 && this.happy > 0) {
+            if (this.health > 100){
+                this.health = 100;
+            }
+            if (this.hunger > 100){
+                this.hunger = 100;
+            }
+            if (this.thirst > 100){
+                this.thirst = 100;
+            }
+            if (this.energy > 100){
+                this.energy = 100;
+            }
+            if (this.happy > 100){
+                this.happy = 100;
+            }
+            this.health -= 1;
+            this.hunger -= 1;
+            this.thirst -= 1;
+            this.energy -= 1;
+            this.happy -= 1;
+            this.updateBars();
+        } else if (this.energy <= 0) {
+            this.health -= 30;
+            this.sleep();
+            this.updateBars();
+        } else {
+            this.petDies();
+        }
         setTimeout(() => {
             this.cycle();
         }, 200);
@@ -43,6 +66,12 @@ class pet {
         thirst.value = this.thirst;
         energy.value = this.energy;
         happy.value = this.happy;
+    }
+    petDies(){
+        title.innerHTML = `${currentPet.name} died :(`;
+        modalTwo.style.display = "flex";
+        deathMessage.innerHTML = `${currentPet.name} died`;
+        dead = true;
     }
 }
 class dog extends pet {
@@ -93,34 +122,35 @@ class guineaPig extends pet {
         return this;
     }
 }
+let dead = false;
 let currentPet;
 dogBtn.addEventListener("click", () => {
+    modalOne.style.display = "flex";
     food.src = "./images/dog.eat.png";
-    let name = prompt("What would you like to call your dog?", "bill");
-    currentPet = new dog(name);
-    petName.innerHTML = currentPet.name;
-    petChoice.style.display = "none";
+    currentPet = new dog();
+    walk.style.display = "block";
     petImage.src = "./images/dog.png"
-    gameBox.style.display = "flex";
-    currentPet.cycle();
 })
 guineaPigBtn.addEventListener("click", () => {
+    modalOne.style.display = "flex";
     food.src = "./images/guineapig.food.png";
-    let name = prompt("What would you like to call your guinea pig?", "bill");
-    currentPet = new guineaPig(name);
-    petName.innerHTML = currentPet.name;
-    petChoice.style.display = "none";
+    currentPet = new guineaPig();
+    runWheel.style.display = "block";
+    poops.style.display = "block";
     petImage.src = "./images/guneapig.png"
-    gameBox.style.display = "flex";
-    currentPet.cycle();
 })
 catBtn.addEventListener("click", () => {
+    modalOne.style.display = "flex";
     food.src = "./images/cat.eat.png";
-    let name = prompt("What would you like to call your cat?", "bill");
-    currentPet = new cat(name);
-    petName.innerHTML = currentPet.name;
-    petChoice.style.display = "none";
+    currentPet = new cat();
+    play.style.display = "block";
     petImage.src = "./images/cat.png"
+})
+start.addEventListener("click", () => {
+    modalOne.style.display = "none";
+    currentPet.name = nameInput.value;
+    title.innerHTML = `You're playing with ${currentPet.name}`;
+    petChoice.style.display = "none";
     gameBox.style.display = "flex";
     currentPet.cycle();
 })
@@ -144,4 +174,7 @@ play.addEventListener("click", () => {
 })
 poops.addEventListener("click", () => {
     currentPet.poops();
+})
+restart.addEventListener("click", () => {
+    location.reload();
 })

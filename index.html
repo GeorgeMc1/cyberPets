@@ -13,7 +13,7 @@
 <body>
 
     <section>
-        <h1>Choose your pet to play with</h1>
+        <h1 id="title">Choose your pet to play with</h1>
     </section>
     <div class="main">
         <section id="petChoice">
@@ -27,8 +27,13 @@
                 <img src="./images/cat.png" alt="Cat image">
             </div>
         </section>
-
-        
+        <div id="modalOne">
+            <div id="modalOneContent">
+                <h2>What do you want to name your pet?</h2>
+                <input type="text" id="nameInput">
+                <button id="start">Start</button>
+            </div>
+        </div>
         <div id="gameBox">
             <p id="petName"></p>
             <img id="petImage" src="" alt="">
@@ -67,6 +72,12 @@
                 <label for="happy">Happy</label>
                 <progress id="happy" value="32" max="100"> 32% </progress>
             </section>
+        </div>
+        <div id="modalTwo">
+            <div id="modalTwoContent">
+                <h2 id="deathMessage">Your pet died</h2>
+                <button id="restart">Restart?</button>
+            </div>
         </div>
     </div>
 
