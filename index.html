@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Cyber Pets</title>
+    <title>Cyber Pets</title>
 </head>
 
 <body>
@@ -28,41 +29,45 @@
         </section>
 
         
-        <section id="careChoices">
-            <div id="walk">
-                <img src="./images/walk.png" alt="walkimg">
-            </div>
-            <div id="eat">
-                <img src="" alt="">
-            </div>
-            <div id="drink">
-                <img src="./images/drink.jpg" alt="drinkImg">
-            </div>
-            <div id="sleep">
-                <img src="./images/sleep.png" alt="sleep">
-            </div>
-            <div id="runWheel">
-                <img src="./images/guieaPigWheel.gif" alt="gift">
-            </div>
-            <div id="play">
-                <img src="./images/play.png" alt="petPlay">
-            </div>
-            <div id="poops">
-                <img src="./images/poop.png" alt="petPoops">
-            </div>
-        </section>
-        <section id="prarametersLevel">
-            <label for="health">Downloading progress:</label>
-            <progress id="health" value="32" max="100"> 32% </progress>
-            <label for="hunger">Downloading progress:</label>
-            <progress id="hunger" value="32" max="100"> 32% </progress>
-            <label for="thirst">Downloading progress:</label>
-            <progress id="thirst" value="32" max="100"> 32% </progress>
-            <label for="energy">Downloading progress:</label>
-            <progress id="energy" value="32" max="100"> 32% </progress>
-            <label for="happy">Downloading progress:</label>
-            <progress id="happy" value="32" max="100"> 32% </progress>
-        </section>
+        <div id="gameBox">
+            <p id="petName"></p>
+            <img id="petImage" src="" alt="">
+            <section id="careChoices">
+                <div id="walk">
+                    <img src="./images/walk.png" alt="walkimg">
+                </div>
+                <div id="eat">
+                    <img id="food" src="" alt="">
+                </div>
+                <div id="drink">
+                    <img src="./images/drink.jpg" alt="drinkImg">
+                </div>
+                <div id="sleep">
+                    <img src="./images/sleep.png" alt="sleep">
+                </div>
+                <div id="runWheel">
+                    <img src="./images/guieaPigWheel.gif" alt="gift">
+                </div>
+                <div id="play">
+                    <img src="./images/play.png" alt="petPlay">
+                </div>
+                <div id="poops">
+                    <img src="./images/poop.png" alt="petPoops">
+                </div>
+            </section>
+            <section id="prarametersLevel">
+                <label for="health">Downloading progress:</label>
+                <progress id="health" value="32" max="100"> 32% </progress>
+                <label for="hunger">Downloading progress:</label>
+                <progress id="hunger" value="32" max="100"> 32% </progress>
+                <label for="thirst">Downloading progress:</label>
+                <progress id="thirst" value="32" max="100"> 32% </progress>
+                <label for="energy">Downloading progress:</label>
+                <progress id="energy" value="32" max="100"> 32% </progress>
+                <label for="happy">Downloading progress:</label>
+                <progress id="happy" value="32" max="100"> 32% </progress>
+            </section>
+        </div>
     </div>
 
     <script src="script.js"></script>
