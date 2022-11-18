@@ -1,6 +1,7 @@
 * {
-  cursor: pointer;
+  transition: all 2s;
 }
+
 body {
   background-color: rgb(197, 221, 221);
   margin: 0;
@@ -39,6 +40,7 @@ button {
 #petChoice img,
 #petImage {
   width: 200px;
+  height: 180px;
   border: 10px ridge blueviolet;
 }
 
@@ -75,7 +77,11 @@ button {
 }
 
 #gameBox {
-  display: none;
+  display: flex;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
   flex-direction: column;
   align-items: center;
 }
@@ -93,15 +99,18 @@ button {
   display: none;
 }
 
+.care-choice {
+  margin: 10px;
+}
+
 #restart {
   width: 30%;
 }
 
 .image {
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   border: 3px ridge blueviolet;
-  margin: 10px;
 }
 
 #prarametersLevel {
