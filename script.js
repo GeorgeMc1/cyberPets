@@ -188,7 +188,7 @@ guineaPigBtn.addEventListener("click", () => {
         petImage.src = "./images/guineaPig.png";
     });
     poops.addEventListener("mouseover", () => {
-        petImage.src = "images/guineaPigpoop.png";
+        petImage.src = "images/guineaPigPoop.png";
     });
     poops.addEventListener("mouseout", () => {
         petImage.src = "./images/guineaPig.png";
