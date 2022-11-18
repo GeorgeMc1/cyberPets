@@ -220,7 +220,7 @@ catBtn.addEventListener("click", () => {
         petImage.src = "./images/cat.png";
     });
     play.addEventListener("mouseover", () => {
-        petImage.src = "images/catplay.gif";
+        petImage.src = "images/catPlay.gif";
     });
     play.addEventListener("mouseout", () => {
         petImage.src = "./images/cat.png";
