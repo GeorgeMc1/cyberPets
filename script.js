@@ -125,6 +125,7 @@ let dead = false;
 let currentPet;
 dogBtn.addEventListener("click", () => {
     modalOne.style.display = "flex";
+    nameInput.focus();
     food.src = "./images/dog.eat.png";
     currentPet = new dog();
     walk.style.display = "block";
@@ -156,44 +157,46 @@ dogBtn.addEventListener("click", () => {
 })
 guineaPigBtn.addEventListener("click", () => {
     modalOne.style.display = "flex";
+    nameInput.focus();
     food.src = "./images/guineapig.food.png";
     currentPet = new guineaPig();
     runWheel.style.display = "block";
     poops.style.display = "block";
-    petImage.src = "./images/guineapig.png";
+    petImage.src = "./images/guineaPig.png";
     eat.addEventListener("mouseover", () => {
         petImage.src = "images/guineaPigEat.gif";
     });
     eat.addEventListener("mouseout", () => {
-        petImage.src = "./images/guineapig.png";
+        petImage.src = "./images/guineaPig.png";
     });
     drink.addEventListener("mouseover", () => {
         petImage.src = "images/guineaPigDrink.webp";
     });
     drink.addEventListener("mouseout", () => {
-        petImage.src = "./images/guineapig.png";
+        petImage.src = "./images/guineaPig.png";
     });
     sleep.addEventListener("mouseover", () => {
         petImage.src = "images/guineaPigSleep.gif";
     });
     sleep.addEventListener("mouseout", () => {
-        petImage.src = "./images/guineapig.png";
+        petImage.src = "./images/guineaPig.png";
     });
     runWheel.addEventListener("mouseover", () => {
         petImage.src = "images/guineaPigWheel.gif";
     });
     runWheel.addEventListener("mouseout", () => {
-        petImage.src = "./images/guineapig.png";
+        petImage.src = "./images/guineaPig.png";
     });
     poops.addEventListener("mouseover", () => {
         petImage.src = "images/guineaPigpoop.png";
     });
     poops.addEventListener("mouseout", () => {
-        petImage.src = "./images/guineapig.png";
+        petImage.src = "./images/guineaPig.png";
     });
 })
 catBtn.addEventListener("click", () => {
     modalOne.style.display = "flex";
+    nameInput.focus();
     food.src = "./images/cat.eat.png";
     currentPet = new cat();
     play.style.display = "block";
