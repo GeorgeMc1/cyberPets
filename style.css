@@ -1,4 +1,4 @@
-*{
+* {
   transition: all 2s;
 }
 
@@ -29,13 +29,22 @@ h2 {
   margin: 10px;
 }
 
+button {
+  width: 9%;
+  height: 2rem;
+  color: #fff;
+  background-color: #40525a;
+  font-size: 1.25rem;
+  min-width: 60px;
+}
+
 #petChoice {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.pet-choice{
+.pet-choice {
   margin: 0 10px;
 }
 
@@ -67,13 +76,19 @@ h2 {
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  padding: 20px;
+  padding: 15px;
   width: 500px;
-  background-color: white;
+  background-color: #4397b5;
+  text-align: center;
+  border-radius: 0.5rem;
 }
 
 #nameInput {
   margin-bottom: 10px;
+  width: 20%;
+  padding: 0.5rem;
+  border: 2px solid #40525a;
+  border-radius: 0.1rem;
 }
 
 #gameBox {
@@ -99,8 +114,12 @@ h2 {
   display: none;
 }
 
-.care-choice{
+.care-choice {
   margin: 10px;
+}
+
+#restart {
+  width: 30%;
 }
 
 .image {
@@ -134,6 +153,15 @@ h2 {
   .pet-choice {
     margin: 0 0 6px 0;
   }
+
+  #nameInput {
+    width: 50%;
+  }
+
+  button {
+    width: 25%;
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -142,6 +170,10 @@ h2 {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+  #restart {
+    width: 50%;
   }
 }
 
@@ -170,5 +202,11 @@ h2 {
   #modalOneContent,
   #modalTwoContent {
     padding: 16px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  #restart {
+    width: 70%;
   }
 }
