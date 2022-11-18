@@ -58,7 +58,6 @@ class pet {
         setTimeout(() => {
             this.cycle();
         }, 200);
-        return this;
     }
     updateBars(){
         health.value = this.health;
@@ -130,6 +129,30 @@ dogBtn.addEventListener("click", () => {
     currentPet = new dog();
     walk.style.display = "block";
     petImage.src = "./images/dog.png"
+    walk.addEventListener("mouseover", () => {
+        petImage.src = "images/dogWalk.gif";
+    });
+    walk.addEventListener("mouseout", () => {
+        petImage.src = "./images/dog.png";
+    });
+    eat.addEventListener("mouseover", () => {
+        petImage.src = "images/dogFood.gif";
+    });
+    eat.addEventListener("mouseout", () => {
+        petImage.src = "./images/dog.png";
+    });
+    drink.addEventListener("mouseover", () => {
+        petImage.src = "images/dogDrink.gif";
+    });
+    drink.addEventListener("mouseout", () => {
+        petImage.src = "./images/dog.png";
+    });
+    sleep.addEventListener("mouseover", () => {
+        petImage.src = "images/dogSleep.gif";
+    });
+    sleep.addEventListener("mouseout", () => {
+        petImage.src = "./images/dog.png";
+    });
 })
 guineaPigBtn.addEventListener("click", () => {
     modalOne.style.display = "flex";
@@ -137,7 +160,37 @@ guineaPigBtn.addEventListener("click", () => {
     currentPet = new guineaPig();
     runWheel.style.display = "block";
     poops.style.display = "block";
-    petImage.src = "./images/guneapig.png"
+    petImage.src = "./images/guineapig.png";
+    eat.addEventListener("mouseover", () => {
+        petImage.src = "images/guineaPigEat.gif";
+    });
+    eat.addEventListener("mouseout", () => {
+        petImage.src = "./images/guineapig.png";
+    });
+    drink.addEventListener("mouseover", () => {
+        petImage.src = "images/guineaPigDrink.webp";
+    });
+    drink.addEventListener("mouseout", () => {
+        petImage.src = "./images/guineapig.png";
+    });
+    sleep.addEventListener("mouseover", () => {
+        petImage.src = "images/guineaPigSleep.gif";
+    });
+    sleep.addEventListener("mouseout", () => {
+        petImage.src = "./images/guineapig.png";
+    });
+    runWheel.addEventListener("mouseover", () => {
+        petImage.src = "images/guineaPigWheel.gif";
+    });
+    runWheel.addEventListener("mouseout", () => {
+        petImage.src = "./images/guineapig.png";
+    });
+    poops.addEventListener("mouseover", () => {
+        petImage.src = "images/guineaPigpoop.png";
+    });
+    poops.addEventListener("mouseout", () => {
+        petImage.src = "./images/guineapig.png";
+    });
 })
 catBtn.addEventListener("click", () => {
     modalOne.style.display = "flex";
@@ -145,14 +198,43 @@ catBtn.addEventListener("click", () => {
     currentPet = new cat();
     play.style.display = "block";
     petImage.src = "./images/cat.png"
+    eat.addEventListener("mouseover", () => {
+        petImage.src = "images/catEat.gif";
+    });
+    eat.addEventListener("mouseout", () => {
+        petImage.src = "./images/cat.png";
+    });
+    drink.addEventListener("mouseover", () => {
+        petImage.src = "images/catDrink.gif";
+    });
+    drink.addEventListener("mouseout", () => {
+        petImage.src = "./images/cat.png";
+    });
+    sleep.addEventListener("mouseover", () => {
+        petImage.src = "images/catSleep.gif";
+    });
+    sleep.addEventListener("mouseout", () => {
+        petImage.src = "./images/cat.png";
+    });
+    play.addEventListener("mouseover", () => {
+        petImage.src = "images/catplay.gif";
+    });
+    play.addEventListener("mouseout", () => {
+        petImage.src = "./images/cat.png";
+    });
 })
 start.addEventListener("click", () => {
     modalOne.style.display = "none";
     currentPet.name = nameInput.value;
     title.innerHTML = `You're playing with ${currentPet.name}`;
     petChoice.style.display = "none";
-    gameBox.style.display = "flex";
-    currentPet.cycle();
+    // gameBox.style.display = "flex";
+    gameBox.style.height = "500px";
+    gameBox.style.width = "100%";
+    gameBox.style.opacity = 1;
+    setTimeout(() => {
+        currentPet.cycle();
+    }, 2000);
 })
 walk.addEventListener("click", () => {
     currentPet.walk();
@@ -176,5 +258,9 @@ poops.addEventListener("click", () => {
     currentPet.poops();
 })
 restart.addEventListener("click", () => {
-    location.reload();
+    modalTwo.style.opacity = 0;
+    gameBox.style.opacity = 0;
+    setTimeout(() => {
+        location.reload();
+    }, 2000);
 })
